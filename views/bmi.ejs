@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Notes 
+
+  BMI Fomula in this site: https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html
+Age is irrelevant 
+
+-->
+
+<head>
+    <link rel="stylesheet" href="/css/bmi.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI checker</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+          <form actiont="/" method="post">
+              <h1>BMI calculator</h1>
+              <p>Insert Your Age</p>
+              <input type="text" id="age" name="age" value="<%= ageInput%>">
+              <p>Insert Weight in Kg</p>
+              <input type="text" name="weight" id="weight" value="<%= weightInput%>">
+              <br>
+              <p>Insert Height in cm</p>
+              <input type="text" name="height" id="height" value="<%= heightInput%>">
+              <br>
+              <button type="submit" name="submit" id="calc">check</button> 
+              <% if(put) {%>
+                <p id="result">Your BMI result is <%= bmiResult %></p>
+             <% } %>
+         </form>
+        </div>
+    </div>
+ 
+</body>
+
+</html>
